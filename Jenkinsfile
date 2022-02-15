@@ -8,6 +8,7 @@ pipeline {
     }
     options {
         timestamps()
+        retry(2)
     }
 
     stages {
