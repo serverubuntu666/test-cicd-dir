@@ -36,6 +36,18 @@ pipeline {
                 echo "skip running test:${params.SKIP_TEST}"
                 echo "Branch choice: ${params.BRANCH}"
                 echo "Sonar password: ${params.SONAR_SERVER_PWD}"
+
+                script {
+                    def name = "${params.NAME}"
+                    def branch = "${params.BRANCH}"
+
+                    if ( branch == "master") {
+                        echo "Mr. ${name}"
+                    }
+                    else {
+                        echo "branch: ${branch}"
+                    }
+                }
             }
         }
     }
