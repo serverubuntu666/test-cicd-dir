@@ -7,7 +7,7 @@ pipeline {
         password(name: 'SONAR_SERVER_PWD', description: 'Enter sonar password')
     }
     options {
-        timestamp()
+        timestamps()
     }
 
     stages {
