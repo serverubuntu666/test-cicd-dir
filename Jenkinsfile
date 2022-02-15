@@ -6,7 +6,9 @@ pipeline {
         choice(name: 'BRANCH', choices: ['master', 'dev'], description:'choose the branch')
         password(name: 'SONAR_SERVER_PWD', description: 'Enter sonar password')
     }
-
+    options {
+        timestamp()
+    }
 
     stages {
         stage('build phase') {
